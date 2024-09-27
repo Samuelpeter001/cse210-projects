@@ -17,5 +17,12 @@ class Program
         Job1._startYear = 2024;
         Job1._endYear = 2027;
 
-    }
+        Resume myResume = new Resume();
+        myResume._name = "Peter Samuel";
+
+        myResume._jobs.Add(job1);
+        myResume._jobs.Add(job2);
+
+        myResume.Display();
+   }
 }
