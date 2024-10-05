@@ -1,0 +1,25 @@
+using System;
+using System.Runtime.CompilerServices;
+
+public class Fraction
+{
+    Private int _top();
+    Private int _bottom();
+    public Fraction()
+    public Fraction(int wholeNumber)
+    {
+        _top = wholeNumber;
+        _buttom = 1
+    }
+    public Fraction(int top, int buttom)
+    {
+        
+    }
+
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello Learning03 World!");
+        }
+    }
+}

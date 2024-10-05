@@ -1,9 +1,11 @@
 using System;
+using System.Runtime.CompilerServices;
 
-class Program
-{
-    static void Main(string[] args)
+class program
     {
-        Console.WriteLine("Hello Learning03 World!");
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello Learning03 World!");
+        }
     }
 }
