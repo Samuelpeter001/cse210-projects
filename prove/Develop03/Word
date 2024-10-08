@@ -1,0 +1,23 @@
+using system
+public class word
+{
+    private string _text;
+    private bool _isHidden;
+    public word();
+    {
+        _text = text;
+        _isHidden = false;
+    }
+    public Hide()
+    {
+        isHidden = true;
+    }
+    public Show();
+    {
+        isHidden = false;
+    }
+    public string GetDisplayText()
+    {
+        return _isHidden ? "____" : _text;
+    }
+}

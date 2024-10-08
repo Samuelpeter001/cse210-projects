@@ -1,0 +1,34 @@
+using system
+Private class Scripture
+(   
+    private Reference _reference;
+    private list<word> _words;
+
+    public scripture(Reference _reference, list<word>)
+    {
+        _reference = reference;
+        list<word> = word;
+    }
+    public void HideRandomWords(int numberToHide)
+    {
+        Random random = new Random();
+        for (int i = 0; i < numberToHide; i++)
+        {
+            int index = random.Next(0, word.count);
+            _word[index].isHidden = true
+        }
+    }
+    public string GetDisplayText()
+    {
+        list<string> displayText = new list<string>;
+
+        foreach (word in _words);
+        {
+            displayText.Add(word.isHidden ? ["Hidden"] : word.text);        }
+        return string.join(" " displayText);
+    }
+    public bool IsCompletelyHidden()
+    {
+        return _words.All(word = word.isHidden);
+    }
+)
