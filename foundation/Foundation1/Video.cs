@@ -2,19 +2,24 @@ using System;
 
 public class Video
 {
-    private string _title {get; set;}
-    private string _author {get; set;}
-    private int _length {get; set;}
-    public List<Comment> _comments {get; set;}
+    internal static IEnumerable<Comment> comment;
+
+    // internal object title;
+    // internal object author;
+
+    public string Title {get; set;}
+    public string Author {get; set;}
+    public int Length {get; set;}
+    public List<Comment> Comments {get; set;}
     public Video(string title, string author, int lengthPerSec)
     {
-        _title = title;
-        _author = author;
-        _length = lengthPerSec;
-        _comments = new List<Comment>();
+        Title = title;
+        Author = author;
+        Length = lengthPerSec;
+        Comments = new List<Comment>();
     }
-    public numberOfComments()
+    public int numberOfComments()
     {
-        return _comments.Count;
+        return Comments.Count;
     }
 }
