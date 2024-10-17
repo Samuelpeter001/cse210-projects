@@ -22,5 +22,20 @@ public class Order
             shippingCost = International_Cost;
         }
         return totalCost + shippingCost;
+        public packingLabel()
+        {
+            var Label = " ";
+            foreach (var product in Products)
+            {
+                Label =+ $"{product.Name}, ID: {product.ID}";
+                return Label;
+            }
+        }
+
+        public string ShippingLabel()
+        {
+        return $"Shipping Label:\n{Order_Customer.Name}\n{Order_Customer.CustomerAddress}";
+        }
+
     }
 }
