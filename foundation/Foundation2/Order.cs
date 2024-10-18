@@ -1,14 +1,15 @@
 using System;
+using System.Collections.Generic;
 public class Order
 {
-    private List<Product> Products {get; set;} = new List<Product>();
-    private Customer Order_Customer {get; set;}
+    public List<Product> Product {get; set;} = new List<Product>();
+    public Customer Order_Customer {get; set;}
     private const decimal USA_Cost = 5;
     private const decimal International_Cost = 35;
     public decimal TotalCost()
     {
         decimal totalCost = 0;
-        foreach (var product in Products)
+        foreach (var product in Product)
         {
             totalCost += product.TotalCost();
         }
@@ -22,20 +23,33 @@ public class Order
             shippingCost = International_Cost;
         }
         return totalCost + shippingCost;
-        public packingLabel()
+    }
+        public string PackingLabel()
         {
             var Label = " ";
-            foreach (var product in Products)
+            foreach (var product in Product)
             {
-                Label =+ $"{product.Name}, ID: {product.ID}";
-                return Label;
+                Label += $"{product.Name}, ID: {product.ProductId}/n";
             }
+            return Label;
         }
 
         public string ShippingLabel()
         {
-        return $"Shipping Label:\n{Order_Customer.Name}\n{Order_Customer.CustomerAddress}";
+        return $"Shipping Label:\n{Order_Customer.Name}\n{Order_Customer.CustomerAdress}";
         }
 
+    }
+
+internal class Product
+{
+    public string Name { get; internal set; }
+    public int ProductId { get; internal set; }
+    public double Price { get; internal set; }
+    public int Quantity { get; internal set; }
+
+    internal decimal TotalCost()
+    {
+        throw new NotImplementedException();
     }
 }

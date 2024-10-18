@@ -1,11 +1,11 @@
 using System;
 public class Products
 {
-    private string name;
-    private int productId;
-    private int price;
-    private int quantity;
-    private int total;
+    public string name {get; set;}
+    public int productId {get; set;}
+    public int price {get; set;}
+    public int quantity {get; set;}
+    public int total {get; set;}
 
     public Products(String Name, int ProductId, int Price, int Quantity)
     {
@@ -16,7 +16,6 @@ public class Products
     }
     public decimal TotalCost()
     {
-        total = price * quantity;
-        return total;
+        return (decimal)price * quantity;
     }
 }

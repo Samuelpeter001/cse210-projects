@@ -3,8 +3,7 @@ public class Program
 {
     public static void Main()
     {
-        // Create address
-        var address = new Address
+        var adress = new Adress
         {
             Street = "18 Brave Street",
             City = "Villa",
@@ -14,7 +13,7 @@ public class Program
         var customer = new Customer
         {
             Name = "John Doe",
-            CustomerAddress = address
+            CustomerAdress = adress
         };
         var product1 = new Product { Name = "KenLouis", ProductId = 1952, Price = 30.00, Quantity = 5 };
         var product2 = new Product { Name = "Wristwatch", ProductId = 2115, Price = 10.00, Quantity = 2 };
@@ -23,8 +22,8 @@ public class Program
         {
             Order_Customer = customer
         };
-        order.Products.Add(product1);
-        order.Products.Add(product2);
+        order.Product.Add(product1);
+        order.Product.Add(product2);
 
         Console.WriteLine(order.PackingLabel());
         Console.WriteLine(order.ShippingLabel());
