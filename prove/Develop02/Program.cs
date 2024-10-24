@@ -4,8 +4,7 @@ public class Program
     {
         Journal journal = new Journal();
         journal.LoadJournal();
-
-        // Display loaded entries
+        
         foreach (var entry in journal.Entries)
         {
             Console.WriteLine($"Date: {entry.Date}, Prompt: {entry.Prompt}, Reply: {entry.Reply}");
