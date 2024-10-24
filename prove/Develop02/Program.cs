@@ -1,9 +1,14 @@
-using System;
-
-class Program
+public class Program
 {
-    static void Main(string[] args)
+    public static void Main(string[] args)
     {
-        Console.WriteLine("Hello Develop02 World!");
+        Journal journal = new Journal();
+        journal.LoadJournal();
+
+        // Display loaded entries
+        foreach (var entry in journal.Entries)
+        {
+            Console.WriteLine($"Date: {entry.Date}, Prompt: {entry.Prompt}, Reply: {entry.Reply}");
+        }
     }
 }
