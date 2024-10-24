@@ -3,12 +3,24 @@ class Program
     static void Main(string[] args)
     {
         BreathingActivity breathingActivity = new BreathingActivity();
-        breathingActivity.Run();
 
         ListingActivity listingActivity = new ListingActivity();
-        listingActivity.Run();
 
         ReflectingActivity reflectingActivity = new ReflectingActivity();
-        reflectingActivity.Run();
     }
+    Console.Write("Choose an option: ");
+    int option = Convert.ToInt32(Console.ReadLine());
+
+        switch (option)
+            {
+                case 1:
+                    breathingActivity.Run()
+                    break;
+                case 2:
+                    listingActivity.Run();
+                    break;
+                case 3:
+                    reflectingActivity.Run();
+                    break;
+            }
 }
