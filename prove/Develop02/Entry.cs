@@ -1,20 +1,13 @@
-        public class Entry
-        {
-            Console.writeLine("Today's journal " + DateTime.Now);
-            Console.WriteLine("prompt: " + prompt)
-            Console.Write("input: ");
-            string reply = Console.ReadLine();
-            Entry entry = new Entry(prompt, reply, DateTime.Now);
-            Input.Add(entry);
-            
-            Console.Writeline("Input saved!");
-        }
-        Public display()
-        {
-            foreach(inputs in Input)
-            {
-                Console.WriteLine($"prompt{inputs.prompt}")
-                Console.WriteLine($"{inputs.Date.ToString("yyyy-MM-dd")}")
-                
-            }
-        }
+public class Entry
+{
+    public DateTime Date { get; set; }
+    public string Prompt { get; set; }
+    public string Reply { get; set; }
+
+    public Entry(DateTime date, string prompt, string reply)
+    {
+        Date = date;
+        Prompt = prompt;
+        Reply = reply;
+    }
+}
